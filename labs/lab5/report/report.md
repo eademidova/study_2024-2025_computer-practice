@@ -1,8 +1,8 @@
 ---
 ## Front matter
-title: "Шаблон отчёта по лабораторной работе"
-subtitle: "Простейший вариант"
-author: "Дмитрий Сергеевич Кулябов"
+title: "Компьютерный практикум по статистическому анализу данных"
+subtitle: "Лабораторная работа № 5. Построение графиков"
+author: "Демидова Екатерина Алексеевна"
 
 ## Generic otions
 lang: ru-RU
@@ -16,7 +16,7 @@ csl: pandoc/csl/gost-r-7-0-5-2008-numeric.csl
 toc: true # Table of contents
 toc-depth: 2
 lof: true # List of figures
-lot: true # List of tables
+lot: false # List of tables
 fontsize: 12pt
 linestretch: 1.5
 papersize: a4
@@ -33,16 +33,14 @@ polyglossia-otherlangs:
 babel-lang: russian
 babel-otherlangs: english
 ## Fonts
-mainfont: IBM Plex Serif
-romanfont: IBM Plex Serif
-sansfont: IBM Plex Sans
-monofont: IBM Plex Mono
-mathfont: STIX Two Math
-mainfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
-romanfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
-sansfontoptions: Ligatures=Common,Ligatures=TeX,Scale=MatchLowercase,Scale=0.94
-monofontoptions: Scale=MatchLowercase,Scale=0.94,FakeStretch=0.9
-mathfontoptions:
+mainfont: PT Serif
+romanfont: PT Serif
+sansfont: PT Sans
+monofont: PT Mono
+mainfontoptions: Ligatures=TeX
+romanfontoptions: Ligatures=TeX
+sansfontoptions: Ligatures=TeX,Scale=MatchLowercase
+monofontoptions: Scale=MatchLowercase,Scale=0.9
 ## Biblatex
 biblatex: true
 biblio-style: "gost-numeric"
@@ -68,54 +66,113 @@ header-includes:
   - \floatplacement{figure}{H} # keep figures where there are in the text
 ---
 
-# Цель работы
+# Введение
 
-Здесь приводится формулировка цели лабораторной работы. Формулировки
-цели для каждой лабораторной работы приведены в методических
-указаниях.
+**Цель работы**
 
-Цель данного шаблона --- максимально упростить подготовку отчётов по
-лабораторным работам.  Модифицируя данный шаблон, студенты смогут без
-труда подготовить отчёт по лабораторным работам, а также познакомиться
-с основными возможностями разметки Markdown.
+Основная цель работы — освоить синтаксис языка Julia для построения графиков.
 
-# Задание
+**Задачи**
 
-Здесь приводится описание задания в соответствии с рекомендациями
-методического пособия и выданным вариантом.
+1. Используя Jupyter Lab, повторите примеры.
+2. Выполните задания для самостоятельной работы.
 
 # Теоретическое введение
 
-Здесь описываются теоретические аспекты, связанные с выполнением работы.
+Julia — высокоуровневый свободный язык программирования с динамической типизацией, созданный для математических вычислений.[@julialang]. Эффективен также и для написания программ общего назначения. Синтаксис языка схож с синтаксисом других математических языков, однако имеет некоторые существенные отличия.
 
-Например, в табл. [-@tbl:std-dir] приведено краткое описание стандартных каталогов Unix.
-
-: Описание некоторых каталогов файловой системы GNU Linux {#tbl:std-dir}
-
-| Имя каталога | Описание каталога                                                                                                          |
-|--------------|----------------------------------------------------------------------------------------------------------------------------|
-| `/`          | Корневая директория, содержащая всю файловую                                                                               |
-| `/bin `      | Основные системные утилиты, необходимые как в однопользовательском режиме, так и при обычной работе всем пользователям     |
-| `/etc`       | Общесистемные конфигурационные файлы и файлы конфигурации установленных программ                                           |
-| `/home`      | Содержит домашние директории пользователей, которые, в свою очередь, содержат персональные настройки и данные пользователя |
-| `/media`     | Точки монтирования для сменных носителей                                                                                   |
-| `/root`      | Домашняя директория пользователя  `root`                                                                                   |
-| `/tmp`       | Временные файлы                                                                                                            |
-| `/usr`       | Вторичная иерархия для данных пользователя                                                                                 |
-
-Более подробно про Unix см. в [@tanenbaum_book_modern-os_ru; @robbins_book_bash_en; @zarrelli_book_mastering-bash_en; @newham_book_learning-bash_en].
+Для выполнения заданий была использована официальная документация Julia[@juliadoc].
 
 # Выполнение лабораторной работы
 
-Описываются проведённые действия, в качестве иллюстрации даётся ссылка на иллюстрацию (рис. [-@fig:001]).
+Выполним примеры из лабораторной работы для изучения циклов и функций(рис. @fig:001 -  @fig:024)
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![Примеры](image/1.png){#fig:001 width=70%}
+
+![Примеры](image/2.png){#fig:002 width=70%}
+
+![Примеры](image/3.png){#fig:003 width=70%}
+
+![Примеры](image/4.png){#fig:004 width=70%}
+
+![Примеры](image/5.png){#fig:005 width=70%}
+
+![Примеры](image/6.png){#fig:006 width=70%}
+
+![Примеры](image/7.png){#fig:007 width=70%}
+
+![Примеры](image/8.png){#fig:008 width=70%}
+
+![Примеры](image/9.png){#fig:009 width=70%}
+
+![Примеры](image/10.png){#fig:010 width=70%}
+
+![Примеры](image/11.png){#fig:011 width=70%}
+
+![Примеры](image/12.png){#fig:012 width=70%}
+
+![Примеры](image/13.png){#fig:013 width=70%}
+
+![Примеры](image/14.png){#fig:014 width=70%}
+
+![Примеры](image/15.png){#fig:015 width=70%}
+
+![Примеры](image/16.png){#fig:016 width=70%}
+
+![Примеры](image/17.png){#fig:017 width=70%}
+
+![Примеры](image/18.png){#fig:018 width=70%}
+
+![Примеры](image/19.png){#fig:019 width=70%}
+
+![Примеры](image/20.png){#fig:020 width=70%}
+
+![Примеры](image/21.png){#fig:021 width=70%}
+
+![Примеры](image/22.png){#fig:022 width=70%}
+
+![Примеры](image/23.png){#fig:023 width=70%}
+
+![Примеры](image/24.png){#fig:024 width=70%}
+
+Затем выполним задания(рис. @fig:008 - @fig:038)
+
+![Задание 1](image/25.png){#fig:025 width=70%}
+
+![Задание 1](image/26.png){#fig:026 width=70%}
+
+![Задание 2 и 3](image/27.png){#fig:027 width=70%}
+
+![Задание 4 и 5](image/28.png){#fig:028 width=70%}
+
+![Задание 6, 7 и 8](image/29.png){#fig:029 width=70%}
+
+![Задание 9](image/30.png){#fig:030 width=70%}
+
+![Задание 10](image/31.png){#fig:031 width=70%}
+
+![Задание 10](image/32.png){#fig:032 width=70%}
+
+![Задание 10](image/33.png){#fig:033 width=70%}
+
+![Задание 10](image/34.png){#fig:034 width=70%}
+
+![Задание 11](image/35.png){#fig:035 width=70%}
+
+![Задание 11](image/36.png){#fig:036 width=70%}
+
+![Задание 11](image/37.png){#fig:037 width=70%}
+
+![Задание 11](image/38.png){#fig:038 width=70%}
+
 
 # Выводы
 
-Здесь кратко описываются итоги проделанной работы.
+В результате выполнения работы освоили синтаксис языка Julia для построения графиков.
 
 # Список литературы{.unnumbered}
 
 ::: {#refs}
 :::
+
+
